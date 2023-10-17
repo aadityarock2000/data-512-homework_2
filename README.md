@@ -23,26 +23,26 @@ Also, this repo uses code developed by Dr. David W. McDonald for use in Data 512
 
 ### Input data files:
 
-1. 'data/us_cities_by_state_SEPT.2023.csv': Contains a dataset of Wikipedia article pages about US cities categorized by state. This is structured as state, city and url of the article's Wikipedia page
-2. 'data/NST-EST2022-POP.xlsx': Provides population estimates for all US states. We mainly use the 2022 estimates for the analysis.
-3. 'data/US States by Region - US Census Bureau.xlsx': Offers a listing of states organized by US census regional divisions for the 50 states.
+1. `data/us_cities_by_state_SEPT.2023.csv`: Contains a dataset of Wikipedia article pages about US cities categorized by state. This is structured as state, city and url of the article's Wikipedia page
+2. `data/NST-EST2022-POP.xlsx`: Provides population estimates for all US states. We mainly use the 2022 estimates for the analysis.
+3. `data/US States by Region - US Census Bureau.xlsx`: Offers a listing of states organized by US census regional divisions for the 50 states.
 
 ### Intermediary data files:
 
-1. 'data/ores_files' - folder containing the JSON files of names and quality scores in batches of 5000 articles.
-2. 'data/all_page_info_dict.json' - file with city names and its corresponding last revision id.
-3. 'data/cleaned_us_cities_by_state_with_id.csv' - CSV file with cleaned states/cities and merged info with the 'data/all_page_info_dict.json' for further processing.
-4. 'data/merged_data_ores.json' - This is the concatenation of all the JSON files in the 'ores_files' folder
+1. `data/ores_files` - folder containing the JSON files of names and quality scores in batches of 5000 articles.
+2. `data/all_page_info_dict.json` - file with city names and its corresponding last revision id.
+3. `data/cleaned_us_cities_by_state_with_id.csv` - CSV file with cleaned states/cities and merged info with the `data/all_page_info_dict.json` for further processing.
+4. `data/merged_data_ores.json` - This is the concatenation of all the JSON files in the `ores_files` folder
 
 ### Final outputs
 
-1. 'data/wp_scored_city_articles_by_state.csv' - This file contains the final, merged data on states, their regions, populations, article titles, article revision ids, and article qualities. This is the end result of the 'data_processing.ipynb' file.
-
+1. `data/wp_scored_city_articles_by_state.csv` - This file contains the final, merged data on states, their regions, populations, article titles, article revision ids, and article qualities. This is the end result of the `data_processing.ipynb` file.
+2. The resutls of the analysis are in the `data_analysis.ipynb` file as outputs.
 
 ## Known Issues and Special Considerations
 
-1. There are duplicate entries in the 'data/us_cities_by_state_SEPT.2023.csv', which needs to be cleaned.
-2. There are different naming conventions used between the 'data/us_cities_by_state_SEPT.2023.csv' and the others, hence it needs to be cleaned.
+1. There are duplicate entries in the `data/us_cities_by_state_SEPT.2023.csv`, which needs to be cleaned.
+2. There are different naming conventions used between the `data/us_cities_by_state_SEPT.2023.csv` and the others, hence it needs to be cleaned.
 3. Asynchronous functions are used, which can result in a data loss if not tracked. Also this was done due to the non async functions taking hours to process data (5+ hours). This async functions with proper rate limiting makes it faster to obtain data (10 mins vs 5 hours for the whole dataset.).
     - It is important to note that as we use async funtions, it is possible that one might get restricted after continuous use of the function. PLEASE EXERCISE CAUTION WHEN THE ASYNC FUNCTIONS ARE RUN, and read through the API read limits before running the code.
 
@@ -50,7 +50,7 @@ Also, this repo uses code developed by Dr. David W. McDonald for use in Data 512
 ## Reproduction of the Analysis:
 
 1. Place the 3 input files in the data folder (Provided).
-2. Get your API keys following the directions from the 'helper_code/wp_ores_liftwing_example.ipynb'
+2. Get your API keys following the directions from the `helper_code/wp_ores_liftwing_example.ipynb`
 3. Run the data_processing.ipynb to obtain the intermediary files for analysis (Provided; no need to run again.). Please use the async functions sparingly to avoid API restrictions, and follow the directions in the Notebook to reproduce the same intermediary files.
 4. Run the data_analysis.ipynb to view the results/tables.
 
@@ -81,8 +81,6 @@ Though having faith in and basing decisions on biased or restricted data may pos
 Dealing with biased data generally draws criticism and demands efforts to rectify the bias. In the case of a data source like Wikipedia, these challenges escalate rapidly. One immediate concern is that the analysis may produce skewed results, favoring overrepresented groups. This, in turn, could reinforce stereotypes, defeating the primary purpose of the analysis. Using such data in fields like policing and lawmaking could have severe ethical implications.
 
 
-
-
 ## Contact:
-Name - Aaditya Parthasarathy
-Email - aadi2000@uw.edu
+- Name - Aaditya Parthasarathy
+- Email - aadi2000@uw.edu
