@@ -7,7 +7,9 @@ This project delves into the concept of bias in data through an analysis of Wiki
 
 
 ### Licenses
-The code used in this project is licensed under the MIT license. Also, this repo uses code developed by Dr. David W. McDonald for use in Data 512 which is provided under Creative Commons CC-BY license. (https://creativecommons.org/ and https://creativecommons.org/licenses/by/4.0/). The code snippets can be found in the helper_code folder
+The code used in this project is licensed under the MIT license. 
+
+Also, this repo uses code developed by Dr. David W. McDonald for use in Data 512 which is provided under Creative Commons CC-BY license. (https://creativecommons.org/ and https://creativecommons.org/licenses/by/4.0/). The code snippets can be found in the helper_code folder
 
 ### API informaion
 
@@ -54,3 +56,33 @@ The code used in this project is licensed under the MIT license. Also, this repo
 
 
 ## Research Implications
+
+### My learnings
+
+1. It is always important to check duplicates using multiple methods when unfamiliar with the dataset
+2. Use Async functions to speed up data retreival from APIs, keeping in mind the Rate limits.
+
+### Findings
+
+**Potential biases expected in the dataset:**
+
+Various types of biases can impact the content on Wikipedia. One such factor would be population based, wherecities with larger population would have a lot of people giving greater attention to detail in contract to places with lesser population, leading to less and poorer quality articles. Sometimes, a place might be more historically significant and it makes more sense that people like historians would monitor quality of such articles, leading to newly formed places with less articles.
+
+**Using English Wikipedia as a data source:**
+
+Most of Wikipedia's data is crowd sourced, making it difficult to monitor the quality and bias in the datasets. Many articles lack citations as these are not written by professional historians who verify every fact and document them, but by the common people. This adds up to the quality issues seen for many places. Finally, the data is ever-changing and this leads to an uncentainity of the articles being either updated continuously for accuracy or sometimes bad actors can add in intentional misinformation. It is also likely that more educated and internet savvy demographics would have a higher number and quality of articles than less literate places.
+
+**Usefulness of dealing with biased/limited data:**
+
+Though having faith in and basing decisions on biased or restricted data may pose challenges, it offers noteworthy advantages. Firstly, such data can provide valuable historical insights, enabling researchers to unearth the transformation of societal perspectives on specific subjects over time. Secondly, researchers can harness biased Wikipedia data to explore the socio-cultural influences affecting available information, thus elucidating how societies shape digital knowledge repositories. Moreover, analyzing biased data can reveal how both the media and the public interpret and respond to Wikipedia content, subsequently shaping the dynamics of online information dissemination and public discourse.
+
+**Problems of dealing with biased/limited data:**
+
+Dealing with biased data generally draws criticism and demands efforts to rectify the bias. In the case of a data source like Wikipedia, these challenges escalate rapidly. One immediate concern is that the analysis may produce skewed results, favoring overrepresented groups. This, in turn, could reinforce stereotypes, defeating the primary purpose of the analysis. Using such data in fields like policing and lawmaking could have severe ethical implications.
+
+
+
+
+## Contact:
+Name - Aaditya Parthasarathy
+Email - aadi2000@uw.edu
